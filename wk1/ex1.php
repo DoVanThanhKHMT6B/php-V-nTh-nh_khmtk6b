@@ -85,9 +85,7 @@
         echo $ho.$ten;
         echo"<br>";
         echo $ho .= $ten;
-        // viết chương trình để đưa ra lời chào khách hàng biết rằng: nếu tuổi <= 20 thì ghi ra là " chào em" nếu tuổi >=20 <40,
-         //nam thì gọi là "anh", nữ thì gọi là " chị",nếu tuổi >=40 <60 thì ghi ra " chào bác", nếu tuổi >60 nữ thì" chào bà" 
-        // nam thì "chào ông"
+        
         ?>
         
         <header>

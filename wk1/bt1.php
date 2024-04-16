@@ -25,7 +25,9 @@
     $new_lop = str_replace('B', '!', $lop);
     echo(" Xin chào \"" . strtoupper($name) . "\""); echo(" học lớp ");echo "'" . $new_lop . "'";
     echo"<br>";
-
+// viết chương trình để đưa ra lời chào khách hàng biết rằng: nếu tuổi <= 20 thì ghi ra là " chào em" nếu tuổi >=20 <40,
+         //nam thì gọi là "anh", nữ thì gọi là " chị",nếu tuổi >=40 <60 thì ghi ra " chào bác", nếu tuổi >60 nữ thì" chào bà" 
+        // nam thì "chào ông"
     $HoTen = "Do Thanh";
     $tuoi = 19; 
     $gioi_tinh = "nam"; 
@@ -100,12 +102,53 @@ $student = array("thành", "nam", "hùng", "lộc", "hòa");
  foreach ($student as $name) {
  echo $name . "<br>";
  }
-//vd2: tạo một mảng chứa thông tin cỉa khách hàng bao gồm tên địa chỉ giới tính số điện thoại tuổi, đưa ra thông tin của khách hàng đó
+//vd2: tạo một mảng chứa thông tin của khách hàng bao gồm tên địa chỉ giới tính số điện thoại tuổi, đưa ra thông tin của khách hàng đó
+// Tạo một mảng chứa thông tin của khách hàng
+$customer = array(
+    "name" => "John Doe",
+    "address" => "123 Main Street, City, Country",
+    "gender" => "Male",
+    "phone_number" => "123-456-7890",
+    "age" => 30
+);
+
+// Hiển thị thông tin của khách hàng
+echo "Tên: " . $customer["name"] . "\n";
+echo"<br>";
+echo "Địa chỉ: " . $customer["address"] . "\n";
+echo"<br>";
+echo "Giới tính: " . $customer["gender"] . "\n";
+echo"<br>";
+echo "Số điện thoại: " . $customer["phone_number"] . "\n";
+echo"<br>";
+echo "Tuổi: " . $customer["age"] . "\n";
+echo"<br>";
+
 // viết 1 hàm để sét mức học bổng dựa vào điểm trung bình học kỳ và điểm trung bình rèn luyện   8
+function xetHocBong($dtb, $drl) {
+    if ($dtb >= 9) {
+        if ($drl >= 90) {
+            echo "Học bổng xuất sắc.";
+        }
+    } elseif ($dtb >= 8) {
+        if ($drl >= 80) {
+            echo "Học bổng giỏi";
+        }
+    } elseif ($dtb >=7) {
+        if ($drl >= 70) {
+            echo "Học bổng khá";
+        }
+    } else {
+        echo "Không được học bổng.";
+    }
+}
+
+$dtb = 8.6;
+$drl = 86;
+xetHocBong($dtb, $drl);
 ?>
 
  
-   
         <header>
             <!-- place navbar here -->
         </header>
